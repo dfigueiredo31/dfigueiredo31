@@ -22,14 +22,14 @@ jobs:
       - name: Generate PDF document
         uses: hspaans/latexmk-action@v2.1.0
         with:
-          format: pdf
+          format: md
           filename: resume.tex
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: resume
-          path: resume.pdf
+          path: resume.md
 
   commit:
     name: Add and commit to current repo
