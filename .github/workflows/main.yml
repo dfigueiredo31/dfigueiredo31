@@ -5,7 +5,7 @@ name: Compile LaTex to PDF
 on: [push]
   
 jobs:
-  build-test:
+  compile:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -16,3 +16,9 @@ jobs:
         with:
           format: pdf
           filename: resume.tex
+
+      - name: Upload PDF document
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume
+          path: output/resume.pdf
