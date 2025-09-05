@@ -19,8 +19,8 @@ jobs:
     steps:
 
       - name: Install pandoc
-        uses: r-lib/actions/setup-pandoc@v1
-
+        uses: docker://pandoc/latex
+        
       - name: Run pandoc
         run: pandoc --version
     
