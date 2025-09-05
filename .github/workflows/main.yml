@@ -24,16 +24,17 @@ jobs:
       - name: Create output folder
         run: mkdir out
     
-      - name: Generate MD document
-        uses: docker://pandoc/core
-        with:
-          args: --output=out/README.md resume.tex
 
       - name: Generate PDF document
         uses: xu-cheng/latex-action@v4
         with:
           root_file: resume.tex
 
+      - name: Generate MD document
+        uses: docker://pandoc/core
+        with:
+          args: --output=out/README.md resume.pdf
+          
       - name: Move PDF to out
         run: mv resume.pdf out
         
