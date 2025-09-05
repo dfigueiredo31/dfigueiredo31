@@ -19,17 +19,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Generate PDF document
-        uses: hspaans/latexmk-action@v2.1.0
+      - name: Generate MD document
+        uses: docker://pandoc/latex
         with:
-          format: md
-          filename: resume.tex
+          args: --output=out/README.md --output=out/resume.pdf resume.tex
+
+      #- name: Generate PDF document
+        #uses: hspaans/latexmk-action@v2.1.0
+        #with:
+        #  format: pdf
+        #  filename: resume.tex
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: resume
-          path: resume.md
+          path: out
 
   commit:
     name: Add and commit to current repo
@@ -48,6 +53,6 @@ jobs:
       run: | 
         git config --global user.name 'dfigueiredo31'
         git config --global user.email 'd.figueiredo@outlook.pt'
-        git add resume.pdf
+        git add .
         git commit -m "Updated resume"
         git push
