@@ -32,7 +32,7 @@ jobs:
       - name: Generate PDF document
         uses: docker://pandoc/latex:3.5
         with:
-          args: --output=out/resume.pdf resume.tex
+          args: --pdf-engine=pdflatex --output=out/resume.pdf resume.tex
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
