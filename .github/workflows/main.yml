@@ -13,6 +13,7 @@ permissions:
   
 jobs:
   compile:
+    name: Compile LaTex to PDF
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -37,14 +38,12 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      #with:
-      #  ref: main
+
     - name: Download artifact
       uses: actions/download-artifact@v4
       with:
         name: resume
-    #- name: Test downloaded artifact
-     # run: ls -R
+        
     - name: Add and commit to main
       run: | 
         git config --global user.name 'dfigueiredo31'
