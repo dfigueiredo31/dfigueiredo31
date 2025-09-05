@@ -33,7 +33,7 @@ jobs:
       - name: Generate MD document
         uses: docker://pandoc/core
         with:
-          args: --output=out/README.md resume.pdf
+          args: --output=out/README.html resume.tex
           
       - name: Move PDF to out
         run: mv resume.pdf out
