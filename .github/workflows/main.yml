@@ -8,27 +8,33 @@ on:
       - 'main'
     paths-ignore:
       - '**.pdf'
+      - '**.md'
 permissions:
   contents: write
   
 jobs:
   compile:
-    name: Compile LaTex to PDF
+    name: Compile LaTex to MD and PDF
     runs-on: ubuntu-latest
     steps:
+
+      - name: Install pandoc
+        uses: pandoc/actions/setup@v1
+
+      - name: Run pandoc
+        run: pandoc --version
+    
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Create output folder
+        run: mkdir out
+    
       - name: Generate MD document
-        uses: docker://pandoc/latex
-        with:
-          args: --output=out/README.md --output=out/resume.pdf resume.tex
+        run: pandoc --output=out/README.md resume.tex
 
-      #- name: Generate PDF document
-        #uses: hspaans/latexmk-action@v2.1.0
-        #with:
-        #  format: pdf
-        #  filename: resume.tex
+      - name: Generate PDF document
+        run: pandoc --output=out/resume.pdf resume.tex
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
