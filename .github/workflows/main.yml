@@ -17,12 +17,6 @@ jobs:
     name: Compile LaTex to MD and PDF
     runs-on: ubuntu-latest
     steps:
-
-      - name: Install pandoc
-        uses: docker://pandoc/latex
-        
-      - name: Run pandoc
-        run: pandoc --version
     
       - name: Checkout code
         uses: actions/checkout@v4
@@ -31,10 +25,14 @@ jobs:
         run: mkdir out
     
       - name: Generate MD document
-        run: pandoc --output=out/README.md resume.tex
+        uses: docker://pandoc/core
+        with:
+          args: --output=out/README.md resume.tex
 
       - name: Generate PDF document
-        run: pandoc --output=out/resume.pdf resume.tex
+        uses: docker://pandoc/latex:3.5
+        with:
+          args: --output=out/resume.pdf resume.tex
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
