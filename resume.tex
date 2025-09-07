@@ -14,6 +14,7 @@
 \usepackage{array}              % Required for bold tabular columns
 \usepackage{ifthen}             % Required for ifthenelse statements
 \usepackage{titlesec}           % Title formatting
+\usepackage{xstring}
 
 %----------------------------------------------------------------------------------------
 %	MARGINS
@@ -21,60 +22,72 @@
 
 \geometry{
 	top=1cm, % Top margin
-	bottom=0.5cm, % Bottom margin
+	bottom=1cm, % Bottom margin
 	left=1cm, % Left margin
 	right=1cm, % Right margin
 	%showframe, % Uncomment to show how the type block is set on the page
 }
 
+\setlength{\parskip}{0.2em}
+
 %----------------------------------------------------------------------------------------
 %	SECTION TITLES
 %----------------------------------------------------------------------------------------
 
-\setcounter{secnumdepth}{0}
+\setcounter{secnumdepth}{0}   %sets section count to 0
 
-\titleformat{\section}
-  {\normalfont\Large\bfseries}
-  {\MakeUppercase{\sectiontitle} \thesection}
+%section and subsection formatting
+\titleformat{\section}        
+  {\normalfont\huge\bfseries\center\uppercase}
+  {}
+  {}
+  {}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}
+  {\subsectiontitle \thesubsection}
   {}
   {}
   [{\titlerule[1pt]}]
 
+%section and subsection tittle spacing
+\titlespacing{\section}
+  {0em}
+  {0em}
+  {0em}
+
+\titlespacing{\subsubsection}
+  {0em}
+  {0.5em}
+  {-0.2em}
+
+%----------------------------------------------------------------------------------------
+%	LISTS
+%----------------------------------------------------------------------------------------
+
+\renewenvironment{itemize}{
+  \begin{list}
+    {-}
+    {
+      \setlength{\leftmargin}{1em}
+      \setlength{\itemsep}{-0.3em}
+      \setlength{\parskip}{0em}
+      \setlength{\parsep}{0em}
+    }
+}{
+  \end{list}
+}
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT BODY
+%----------------------------------------------------------------------------------------
+
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	NAME
-%----------------------------------------------------------------------------------------
+  \begin{center}
+    \MakeUppercase{\huge \textbf{$name$}}\\$role$
+  \end{center}
 
-\begin{center}
-    \MakeUppercase{
-        \huge{
-            \textbf{David Figueiredo}
-        }
-    }
-    \\
-    Backend developer (.NET \& Python)
-\end{center}
-
-%----------------------------------------------------------------------------------------
-%	BIO
-%----------------------------------------------------------------------------------------
-
-\section{Bio}
-
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}}l}
-    E-mail      & d.figueiredo@outlook.pt               \\  
-    Phone       & (+351) 914156449                      \\
-    LinkedIn    & linkedin.com/in/davidfigueiredo31     \\
-    GitHub      & github.com/dfigueiredo31              \\
-\end{tabular}
-
-%----------------------------------------------------------------------------------------
-%	SUMMARY
-%----------------------------------------------------------------------------------------
-
-\section{Summary}
-
-Developer with 4 years experience working in complex and fast-paced environments. Solid foundations in .NET Framework, C\#, APIs and Webservices (ASMX, WCF), with exposure to Python through a teaching role in higher education. Team player with strong analytic and critic sense. Currently looking for backend, AI or cloud role.
+    $body$
 
 \end{document}

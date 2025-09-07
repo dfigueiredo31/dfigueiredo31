@@ -11,7 +11,7 @@ Developer with 4 years experience working in complex and fast-paced environments
 
 ## Work experience
 
-### Assistant Professor (Fev 2025 - Aug 2025) 
+### Assistant Professor - Fev 2025 to Aug 2025 
 *Universidade de Trás-os-Montes e Alto Douro*
 
 Lectured a Computer Lab on Python, aimed at 1st cycle/undergrad students.
@@ -26,7 +26,7 @@ Covered introductory topics such as:
 
 * Importance of good programming practices such as readable, reusable and documented code
 
-### Application Management Services (AMS) Consultant (Oct 2022 - May 2025)
+### Application Management Services (AMS) Consultant - Oct 2022 to May 2025
 *Softinsa - Engenharia de Software Avançado, Lda.*
 
 Maintained and implemented Costumer Communication workflows, for a client in the banking sector.
@@ -41,7 +41,7 @@ Tools used:
 
 * Precisely EngageOne software suit
 
-### Interoperability Engineer (May 2021 - Oct 2022)
+### Interoperability Engineer - May 2021 to Oct 2022
 *ST+I Unipessoal Lda.*
     
 Assisted in the development of interoperability capabilities for a healthcare software company, by developing and maintaining HL7 interfaces and REST APIs using ASP.NET, C#, and Visual Basic.
