@@ -1,66 +1,66 @@
----
+# ---
 
-name: Compile resume from LaTex to PDF and commit the output file
+# name: Compile resume from LaTex to PDF and commit the output file
 
-on:
-  push:
-    branches:
-      - 'main'
-    paths-ignore:
-      - '**.pdf'
-      - '**.md'
-permissions:
-  contents: write
+# on:
+#   push:
+#     branches:
+#       - 'main'
+#     paths-ignore:
+#       - '**.pdf'
+#       - '**.md'
+# permissions:
+#   contents: write
   
-jobs:
-  compile:
-    name: Compile LaTex to MD and PDF
-    runs-on: ubuntu-latest
-    steps:
+# jobs:
+#   compile:
+#     name: Compile LaTex to MD and PDF
+#     runs-on: ubuntu-latest
+#     steps:
     
-      - name: Checkout code
-        uses: actions/checkout@v4
+#       - name: Checkout code
+#         uses: actions/checkout@v4
 
-      - name: Create output folder
-        run: mkdir out
+#       - name: Create output folder
+#         run: mkdir out
     
 
-      - name: Generate PDF document
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: resume.tex
+#       - name: Generate PDF document
+#         uses: xu-cheng/latex-action@v4
+#         with:
+#           root_file: resume.tex
 
-      - name: Generate MD document
-        uses: docker://pandoc/core
-        with:
-          args: --output=out/README.md resume.tex
+#       - name: Generate MD document
+#         uses: docker://pandoc/core
+#         with:
+#           args: --output=out/README.md resume.tex
           
-      - name: Move PDF to out
-        run: mv resume.pdf out
+#       - name: Move PDF to out
+#         run: mv resume.pdf out
         
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume
-          path: out
+#       - name: Upload artifact
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: resume
+#           path: out
 
-  commit:
-    name: Add and commit to current repo
-    runs-on: ubuntu-latest
-    needs: compile
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+#   commit:
+#     name: Add and commit to current repo
+#     runs-on: ubuntu-latest
+#     needs: compile
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v4
 
-    - name: Download artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: resume
+#     - name: Download artifact
+#       uses: actions/download-artifact@v4
+#       with:
+#         name: resume
         
-    - name: Add and commit to main
-      run: | 
-        git config --global user.name 'dfigueiredo31'
-        git config --global user.email 'd.figueiredo@outlook.pt'
-        git add .
-        git commit -m "Updated resume"
-        git push
+#     - name: Add and commit to main
+#       run: | 
+#         git config --global user.name 'dfigueiredo31'
+#         git config --global user.email 'd.figueiredo@outlook.pt'
+#         git add .
+#         git commit -m "Updated resume"
+#         git push
