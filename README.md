@@ -1,8 +1,3 @@
----
-name: David Figueiredo
-role: Backend developer (.NET & Python)
-...
-
 ## Bio
 
 **E-mail**    d.figueiredo@outlook.pt   
