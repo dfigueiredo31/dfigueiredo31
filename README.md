@@ -18,6 +18,7 @@ Developer with 4 years experience working in complex and fast-paced environments
 *Universidade de Trás-os-Montes e Alto Douro*
 
 Lectured a Computer Lab on Python, aimed at 1st cycle/undergrad students.
+
 Covered introductory topics such as:
 - Programming logic and basic algorithms
 - Control structures
@@ -28,22 +29,19 @@ Covered introductory topics such as:
 *Softinsa - Engenharia de Software Avançado, Lda.*
 
 Maintained and implemented Costumer Communication workflows, for a client in the banking sector.
+
 Tools used:
 - WCF and ASMX webservices built on .NET Framework (C#)
 - SQL Server
 - Azure DevOps
 - Precisely EngageOne software suit
 
-### Interoperability Engineer}{May 2021 - Oct 2022}{ST+I Unipessoal Lda.}{}
+### Interoperability Engineer (May 2021 - Oct 2022)
+*ST+I Unipessoal Lda.*
     
 Assisted in the development of interoperability capabilities for a healthcare software company, by developing and maintaining HL7 interfaces and REST APIs using ASP.NET, C#, and Visual Basic.
-    
-Tools used:
-        \begin{list}{$\cdot$}{}
-		      \setlength{\itemsep}{-0.5em} \vspace{-0.5em}
-            \item .NET Framework (C\# and VB)
-            \item Oracle SQL
-            \item SVN
-	    \end{list}
 
-\end{rSubsection}
+Tools used:
+- .NET Framework (C# and VB)
+- Oracle SQL
+- SVN
