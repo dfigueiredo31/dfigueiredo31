@@ -4,9 +4,9 @@ Backend developer (.NET & Python)
 ## Bio
 
 **E-mail**    d.figueiredo@outlook.pt   
-**Phone**     (+351) 914156449  
-**LinkedIn**  linkedin.com/in/davidfigueiredo31   
-**GitHub**    github.com/dfigueiredo31  
+**Phone**     [(+351) 914156449](tel:+351914156449)  
+**LinkedIn**  [linkedin.com/in/davidfigueiredo31](https://linkedin.com/in/davidfigueiredo31)   
+**GitHub**    [github.com/dfigueiredo31](https://github.com/dfigueiredo31)  
 
 ## Summary
 
