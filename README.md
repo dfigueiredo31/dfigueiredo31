@@ -45,3 +45,9 @@ Tools used:
 - .NET Framework (C# and VB)
 - Oracle SQL
 - SVN
+
+
+## Education
+
+### Master's Degree in Engineering and Management of Information Systems (2023)
+*University of Minho*    
