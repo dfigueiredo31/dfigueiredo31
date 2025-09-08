@@ -16,13 +16,13 @@ Developer with 4 years experience working in complex and fast-paced environments
 
 Lectured a Computer Lab on Python, aimed at 1st cycle/undergrad students, covering topics such as:
 
-* Programming logic and basic algorithms
+- Programming logic and basic algorithms
 
-* Control structures
+- Control structures
 
-* Basic data structures - variables, lists, dictionaries, sets and tuples
+- Basic data structures - variables, lists, dictionaries, sets and tuples
 
-* Importance of good programming practices such as readable, reusable and documented code
+- Importance of good programming practices such as readable, reusable and documented code
 
 ### Application Management Services (AMS) Consultant - Oct 2022 to May 2025
 *Softinsa - Engenharia de Software Avançado, Lda.*
