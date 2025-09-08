@@ -67,5 +67,5 @@ Tools used:
 
 ## Education
 
-### Master's Degree in Engineering and Management of Information Systems (2023)
+### Master's Degree in Engineering and Management of Information Systems - 2023
 *University of Minho*    
