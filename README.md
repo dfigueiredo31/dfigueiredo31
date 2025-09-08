@@ -46,6 +46,8 @@ Tools used:
     
 Assisted in the development of interoperability capabilities for a healthcare software company, by developing and maintaining HL7 interfaces and REST APIs using ASP.NET, C#, and Visual Basic.
 
+
+
 Tools used:
 
 * .NET Framework (C# and VB)
