@@ -56,6 +56,8 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: resume
+    
+    - shell: bash
       run: ls /home/runner/work/dfigueiredo31/dfigueiredo31
     
     # - name: Add and commit to main
