@@ -1,4 +1,4 @@
-## Bio
+## Contact info
 
 **E-mail**    d.figueiredo@outlook.pt   
 **Phone**     (+351) 914156449  
