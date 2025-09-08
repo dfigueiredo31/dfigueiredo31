@@ -33,7 +33,7 @@ jobs:
           args: README.md --metadata-file=template/metadata.yml --template=template/template.tex -o resume.tex
 
       - name: Create output dir
-        run: mkdir output
+        run: mkdir -p output/out
 
       - name: Move resulting files to output
         run: mv resume.tex resume.pdf output/
@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: resume
-          path: output
+          path: output/*
 
   commit:
     name: Add and commit artifacts to repo
@@ -56,7 +56,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: resume
-        
+    
     # - name: Add and commit to main
     #   run: | 
     #     git config --global user.name 'dfigueiredo31'
