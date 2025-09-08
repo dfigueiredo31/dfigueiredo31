@@ -44,23 +44,23 @@ jobs:
           name: resume
           path: output
 
-  # commit:
-  #   name: Add and commit artifacts to repo
-  #   runs-on: ubuntu-latest
-  #   needs: compile
-  #   steps:
-  #   - name: Checkout code
-  #     uses: actions/checkout@v4
+  commit:
+    name: Add and commit artifacts to repo
+    runs-on: ubuntu-latest
+    needs: compile
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-  #   - name: Download artifact
-  #     uses: actions/download-artifact@v4
-  #     with:
-  #       name: resume
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: resume
         
-  #   - name: Add and commit to main
-  #     run: | 
-  #       git config --global user.name 'dfigueiredo31'
-  #       git config --global user.email 'd.figueiredo@outlook.pt'
-  #       git add .
-  #       git commit -m "Updated resume"
-  #       git push
+    # - name: Add and commit to main
+    #   run: | 
+    #     git config --global user.name 'dfigueiredo31'
+    #     git config --global user.email 'd.figueiredo@outlook.pt'
+    #     git add .
+    #     git commit -m "Updated resume"
+    #     git push
