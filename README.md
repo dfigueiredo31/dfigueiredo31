@@ -59,7 +59,7 @@ Tools used:
 ### Web Developer - May 2020 to May 2021
 *S. Roque - Máquinas e Tecnologia Laser, S.A.*  
 
-Assisted in the development of the company’s intranet portal.
+Assisted in the development of the company’s intranet portal, improving functionality and user-experience.
 
 Tools used:
 
