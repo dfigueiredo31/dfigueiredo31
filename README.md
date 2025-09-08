@@ -14,7 +14,7 @@ Developer with 4 years experience working in complex and fast-paced environments
 ### Assistant Professor - Fev 2025 to Aug 2025 
 *Universidade de Trás-os-Montes e Alto Douro*
 
-Lectured a Computer Lab on Python, aimed at 1st cycle/undergrad students, covering topics such as:
+Lectured a Computer Lab on Python, aimed at 1st cycle/undergrad students, covering introductory topics such as:
 
 - Programming logic and basic algorithms
 
@@ -63,7 +63,7 @@ Assisted in the development of the company’s intranet portal, improving functi
 
 Tools used:
 
-- Backend: ASP.NET MVC, C\#, Entity Framework, MS SQL Server
+- Backend: ASP.NET MVC, C#, Entity Framework, MS SQL Server
 
 - Frontend: Razor pages, Bootstrap, jQuery
 
