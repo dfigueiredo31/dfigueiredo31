@@ -32,9 +32,6 @@ jobs:
         with:
           args: README.md --metadata-file=template/metadata.yml --template=template/template.tex -o resume.tex
 
-      - name: Create output dir
-        run: mkdir output/
-
       - name: Move resulting files to output
         run: mv resume.tex resume.pdf output/
 
@@ -51,9 +48,6 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-
-    - name: Create output dir
-      run: mkdir output/
 
     - name: Download artifact
       uses: actions/download-artifact@v4
