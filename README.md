@@ -14,9 +14,7 @@ Developer with 4 years experience working in complex and fast-paced environments
 ### Assistant Professor - Fev 2025 to Aug 2025 
 *Universidade de Trás-os-Montes e Alto Douro*
 
-Lectured a Computer Lab on Python, aimed at 1st cycle/undergrad students.
-
-Covered introductory topics such as:
+Lectured a Computer Lab on Python, aimed at 1st cycle/undergrad students, covering topics such as:
 
 * Programming logic and basic algorithms
 
@@ -29,32 +27,34 @@ Covered introductory topics such as:
 ### Application Management Services (AMS) Consultant - Oct 2022 to May 2025
 *Softinsa - Engenharia de Software Avançado, Lda.*
 
-Maintained and implemented Costumer Communication workflows, for a client in the banking sector.
+Maintained and implemented Customer Communication workflows, for a client in the banking sector, ensuring availability and correctness of customer documents.
+
+Built document templates, aligning the client's business needs, legal requirements and customer data, in order to deliver tailor-made documents such as invoices, contracts and account statements.
+
+Maintained webservices built on .NET Framework and deployed via Azure DevOps, providing other business units with access to the described document workflows.
 
 Tools used:
 
-* WCF and ASMX webservices built on .NET Framework (C#)
+- WCF and ASMX webservices built on .NET Framework (C#)
 
-* SQL Server
+- SQL Server
 
-* Azure 
+- Azure DevOps
 
-* Precisely EngageOne software suit
+- Precisely EngageOne software suit
 
 ### Interoperability Engineer - May 2021 to Oct 2022
 *ST+I Unipessoal Lda.*
-    
-Assisted in the development of interoperability capabilities for a healthcare software company, by developing and maintaining HL7 interfaces and REST APIs using ASP.NET, C#, and Visual Basic.
 
-
+Developed and maintained HL7 interoperability interfaces and REST APIs, built on .NET Framework, ensuring compatibility and correct data exchange between our software suite and third-party systems.
 
 Tools used:
 
-* .NET Framework (C# and VB)
+- .NET Framework (C# and VB)
 
-* Oracle 
+- Oracle 
 
-* SVN
+- SVN
 
 ### Web Developer - May 2020 to May 2021
 *S. Roque - Máquinas e Tecnologia Laser, S.A.*  
@@ -63,9 +63,9 @@ Assisted in the development of the company’s intranet portal.
 
 Tools used:
 
-* Backend: ASP.NET MVC, C\#, Entity Framework, MS SQL Server
+- Backend: ASP.NET MVC, C\#, Entity Framework, MS SQL Server
 
-* Frontend: Razor pages, Bootstrap, jQuery
+- Frontend: Razor pages, Bootstrap, jQuery
 
 ## Education
 
