@@ -36,13 +36,13 @@ jobs:
         run: mkdir -p output/out
 
       - name: Move resulting files to output
-        run: mv resume.tex resume.pdf output/
+        run: mv resume.tex resume.pdf output/out
 
       - name: Upload TEX to artifact
         uses: actions/upload-artifact@v4
         with:
           name: resume
-          path: output/*
+          path: output/out/*
 
   commit:
     name: Add and commit artifacts to repo
@@ -56,6 +56,7 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: resume
+      run: ls /home/runner/work/dfigueiredo31/dfigueiredo31
     
     # - name: Add and commit to main
     #   run: | 
