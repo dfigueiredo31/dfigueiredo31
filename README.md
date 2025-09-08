@@ -20,7 +20,7 @@ Lectured a Computer Lab on Python, aimed at 1st cycle/undergrad students, coveri
 
 * Control structures
 
-* Basic data structures: variables, lists, dictionaries, sets and tuples
+* Basic data structures - variables, lists, dictionaries, sets and tuples
 
 * Importance of good programming practices such as readable, reusable and documented code
 
