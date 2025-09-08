@@ -18,27 +18,31 @@ jobs:
     name: Compile LaTex to MD and PDF
     runs-on: ubuntu-latest
     steps:
-      - name: Create output folder
-        run: mkdir out
-    
+
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Generate PDF document
         uses: docker://pandoc/extra
         with:
-          args: README.md --metadata-file=template/metadata.yml --template=template/template.tex -o out/resume.pdf
+          args: README.md --metadata-file=template/metadata.yml --template=template/template.tex -o resume.pdf
+
+      - name: Upload PDF to artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume
+          path: resume.pdf
 
       - name: Generate LaTex document (for manual editing)
         uses: docker://pandoc/latex
         with:
-          args: README.md --metadata-file=template/metadata.yml --template=template/template.tex -o out/resume.tex
-    
-      - name: Upload artifact
+          args: README.md --metadata-file=template/metadata.yml --template=template/template.tex -o resume.tex
+
+      - name: Upload TEX to artifact
         uses: actions/upload-artifact@v4
         with:
           name: resume
-          path: out
+          path: resume.tex
 
   # commit:
   #   name: Add and commit artifacts to repo
