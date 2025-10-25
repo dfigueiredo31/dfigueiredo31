@@ -28,6 +28,36 @@
   }
 
 %----------------------------------------------------------------------------------------
+%	HEADER FORMATTING
+%----------------------------------------------------------------------------------------
+
+\newcommand{\rHeader}[2]{
+  \begin{center}
+    \MakeUppercase{\huge \textbf{#1}} \\
+    #2
+  \end{center}
+}
+
+% \newenvironment{rHeader}[2]{   
+%   % params
+%   % #1: document header - name
+%   % #2: role/job title
+
+
+% }
+% 	\MakeUppercase{\textbf{#1}}
+% 	\vspace{0.5em}
+% 	\hrule
+% 	\begin{list}{}{
+% 		\setlength{\leftmargin}{0em}
+% 	}
+% 	\item[]
+% }{
+% 	\end{list}
+
+
+
+%----------------------------------------------------------------------------------------
 %	SECTION FORMATTING
 %----------------------------------------------------------------------------------------
 
@@ -78,9 +108,7 @@
 
 \begin{document}
 
-  \begin{center}
-    \MakeUppercase{\huge \textbf{$Name$}}\\$Role$
-  \end{center}
+  \rHeader{$Name$}{$Role$}
 
   $if(Contact)$
     \begin{rSection}{Contact Info}
