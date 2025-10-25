@@ -3,83 +3,73 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[a4paper,11pt]{article}
-\pagestyle{empty} % Suppress headers and footers on all pages
 
 %----------------------------------------------------------------------------------------
 %	REQUIRED PACKAGES
 %----------------------------------------------------------------------------------------
 
-\usepackage{geometry} % Required for adjusting page dimensions and margins
+\usepackage{geometry}           % Required for adjusting page dimensions and margins
 \usepackage[parfill]{parskip}   % Remove paragraph indentation
 \usepackage{array}              % Required for bold tabular columns
 \usepackage{ifthen}             % Required for ifthenelse statements
-\usepackage{titlesec}           % Title formatting
 
 %----------------------------------------------------------------------------------------
-%	MARGINS
+%	MARGINS & PAGE CONFIG
 %----------------------------------------------------------------------------------------
+
+\pagestyle{empty}               % Suppress headers and footers on all pages
 
 \geometry{
-	top=1cm, % Top margin
-	bottom=1cm, % Bottom margin
-	left=1cm, % Left margin
-	right=1cm, % Right margin
-	%showframe, % Uncomment to show how the type block is set on the page
+  top=1cm,                      % Top margin
+	bottom=1cm,                   % Bottom margin
+	left=1cm,                     % Left margin
+	right=1cm,                    % Right margin
+	%showframe,                   % Uncomment to show how the type block is set on the page
+  }
+
+%----------------------------------------------------------------------------------------
+%	SECTION FORMATTING
+%----------------------------------------------------------------------------------------
+
+% Defines the rSection environment for the major sections within the CV
+\newenvironment{rSection}[1]{   
+  % params
+  % #1: section title
+	\MakeUppercase{\textbf{#1}}
+	\vspace{0.5em}
+	\hrule
+	\begin{list}{}{
+		\setlength{\leftmargin}{0em}
+	}
+	\item[]
+}{
+	\end{list}
 }
 
-\setlength{\parskip}{0.2em}
-
 %----------------------------------------------------------------------------------------
-%	SECTION TITLES
+%	SUBSECTION FORMATTING - WORK EXPERIENCE/EDUCATION/...
 %----------------------------------------------------------------------------------------
 
-\setcounter{secnumdepth}{0}   %sets section count to 0
+\newenvironment{rSubsection}[4]{
+  % params
+  % #1: subsection title - role/job title
+  % #2: year(s) employed
+  % #3: company name
+  % #4: location
 
-%section and subsection formatting
-\titleformat{\section}        
-  {\normalfont\huge\bfseries\center\uppercase}
+	\textbf{#1} \hfill {#2}
+	\ifthenelse{\equal{#3}{}} % If param #3 is empty, don't output the company name and location line
   {}
-  {}
-  {}
-
-\titleformat{\subsection}
-  {\normalfont\large\bfseries}
-  {\subsectiontitle \thesubsection}
-  {}
-  {}
-  [{\titlerule[1pt]}]
-
-%section, subsection and subsubsection tittle spacing
-\titlespacing{\section}
-  {0em}
-  {0em}
-  {0em}
-
-\titlespacing{\subsection}
-  {0em}
-  {0.5em}
-  {0.2em}
-
-\titlespacing{\subsubsection}
-  {0em}
-  {0.5em}
-  {-0.2em}
-
-%----------------------------------------------------------------------------------------
-%	LISTS
-%----------------------------------------------------------------------------------------
-
-\renewenvironment{itemize}{
-  \begin{list}
-    {-}
-    {
-      \setlength{\leftmargin}{1em}
-      \setlength{\itemsep}{-0.3em}
-      \setlength{\parskip}{0em}
-      \setlength{\parsep}{0em}
-    }
+  {    
+		\\
+		\textit{#3} \hfill \textit{#4}
+	}
+  \vspace{-2em}
+	\begin{list}{-}{\setlength{\leftmargin}{1em}}
+    \setlength{\itemsep}{-0.6em}
+        \item[]
 }{
-  \end{list}
+	\end{list}
 }
 
 %----------------------------------------------------------------------------------------
@@ -89,9 +79,53 @@
 \begin{document}
 
   \begin{center}
-    \MakeUppercase{\huge \textbf{$name$}}\\$role$
+    \MakeUppercase{\huge \textbf{$Name$}}\\$Role$
   \end{center}
 
-    $body$
+  $if(Contact)$
+    \begin{rSection}{Contact Info}
+      \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}}l}
+        $for(Contact)$
+          $for(it/pairs)$
+            $it.key$ & $it.value$ \\
+          $endfor$
+        $endfor$
+      \end{tabular}
+    \end{rSection}
+  $endif$
+
+  $if(Summary)$
+    \begin{rSection}{Summary}
+      $Summary$
+    \end{rSection}
+  $endif$
+
+  \begin{rSection}{Work experience}
+    $for(Work)$
+      \begin{rSubsection}{$Work.Role$}{$Work.Start$ - $Work.End$}{$Work.Company$}{}  
+        $for(Work.Summary)$
+          $for(it)$
+            \item $it$
+          $endfor$
+        $endfor$
+
+        $if(Work.Tools)$
+          \textbf{Tools used:}
+          $for(Work.Tools)$
+            $for(it)$
+              \item $it$
+            $endfor$
+          $endfor$
+        $endif$
+      \end{rSubsection}
+    $endfor$
+  \end{rSection}
+
+  \begin{rSection}{Education}
+      $for(Education)$
+        \begin{rSubsection}{$Education.Degree$}{$Education.Start$ - $Education.End$}{$Education.Institution$}{}
+        \end{rSubsection}
+      $endfor$
+  \end{rSection}
 
 \end{document}
