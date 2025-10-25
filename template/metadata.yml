@@ -25,10 +25,9 @@ Work:
     Summary:
       - Maintained and implemented Customer Communication workflows, for a client in the banking sector, ensuring availability and correctness of customer documents.
       - Built document templates, aligning the client's business needs, legal requirements and customer data, in order to deliver tailor-made documents such as invoices, contracts and account statements.
-      - Maintained webservices built on .NET Framework and deployed via Azure DevOps, providing other business units with access to the described document workflows.
+      - Maintained WCF and ASMX webservices built on .NET Framework and deployed via Azure DevOps, providing other business units with access to the described document workflows.
     Tools:
-      - WCF and ASMX webservices built on .NET Framework (C#)
-      - SQL Server
+      - .NET Framework (C#); SQL Server
       - Azure DevOps
       - Precisely EngageOne software suit
 
@@ -39,9 +38,7 @@ Work:
     Summary:
       - Developed and maintained HL7 interoperability interfaces and REST APIs, built on .NET Framework, ensuring compatibility and correct data exchange between our software suite and third-party systems.
     Tools:
-      - .NET Framework (C# and VB)
-      - Oracle SQL
-      - SVN
+      - .NET Framework (C# and VB); Oracle SQL; SVN
 
   - Role: Web Developer
     Company: S. Roque - Máquinas e Tecnologia Laser, S.A.
@@ -50,14 +47,13 @@ Work:
     Summary:
       - Assisted in the development of the company's intranet portal, improving functionality and user-experience.
     Tools:
-      - ASP.NET MVC
-      - Entity Framework
-      - Bootstrap
-      - jQuery
+      - ASP.NET MVC (.NET Framework/C#); Entity Framework; MS SQL Server
+      - Bootstrap; jQuery
 
 Education:
   - Degree: Master's Degree in Engineering and Management of Information Systems
     Institution: University of Minho
     Start:
     End: 2023
+    Summary:
 ---
