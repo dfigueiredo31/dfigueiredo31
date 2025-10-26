@@ -1,6 +1,6 @@
 ---
 
-name: Compile resume from README.md file
+name: Compile resume from src/resume.yml
 
 on:
   push:
@@ -8,14 +8,14 @@ on:
       - 'main'
     paths:
       - '.github/workflows/main.yml'
-      - 'template/template.tex'
-      - 'README.md'
+      - 'src/resume.yml'
+
 permissions:
   contents: write
   
 jobs:
   compile:
-    name: Compile LaTex to MD and PDF
+    name: Compile resume source to MD and PDF
     runs-on: ubuntu-latest
     steps:
 
@@ -25,15 +25,15 @@ jobs:
       - name: Generate PDF document
         uses: docker://pandoc/extra
         with:
-          args: README.md --metadata-file=template/metadata.yml --template=template/template.tex -o resume.pdf
+          args: src/resume.yml --template=templates/pdf_template.tex --output=david_figueiredo_net_dev_cv.pdf
 
-      - name: Generate LaTex document (for manual editing)
-        uses: docker://pandoc/latex
+      - name: Generate MD document
+        uses: docker://pandoc/extra
         with:
-          args: README.md --metadata-file=template/metadata.yml --template=template/template.tex -o resume.tex
+          args: src/resume.yml --template=template/md_template.md --write=gfm --wrap=none --output=david_figueiredo_net_dev_cv.md
 
       - name: Move resulting files to output
-        run: mv resume.tex resume.pdf output/
+        run: mv david_figueiredo_net_dev_cv.md david_figueiredo_net_dev_cv.pdf output/
 
       - name: Upload TEX to artifact
         uses: actions/upload-artifact@v4
