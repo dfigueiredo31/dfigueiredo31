@@ -35,15 +35,6 @@ jobs:
       - name: Copy generated MD document to the README
         run: cp output/david_figueiredo_net_dev_cv.MD README.md
 
-      # - name: Move resulting file to output
-      #   run: mv david_figueiredo_net_dev_cv.md david_figueiredo_net_dev_cv.pdf output/
-
-      # - name: Upload TEX to artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: resume
-      #     path: output/
-
       - name: Add and commit to main
         run: | 
           git config --global user.name 'dfigueiredo31'
@@ -51,25 +42,3 @@ jobs:
           git add .
           git commit -m "Compiled a new version of the resume"
           git push
-
-  # commit:
-  #   name: Add and commit artifacts to repo
-  #   runs-on: ubuntu-latest
-  #   needs: compile
-  #   steps:
-  #   - name: Checkout code
-  #     uses: actions/checkout@v4
-
-  #   - name: Download artifact
-  #     uses: actions/download-artifact@v4
-  #     with:
-  #       name: resume
-  #       path: output/
-    
-  #   - name: Add and commit to main
-  #     run: | 
-  #       git config --global user.name 'dfigueiredo31'
-  #       git config --global user.email 'd.figueiredo@outlook.pt'
-  #       git add .
-  #       git commit -m "Compiled a new version of the resume"
-  #       git push
