@@ -25,40 +25,51 @@ jobs:
       - name: Generate PDF document
         uses: docker://pandoc/extra
         with:
-          args: src/resume.yml --template=templates/pdf_template.tex --output=david_figueiredo_net_dev_cv.pdf
+          args: src/resume.yml --template=templates/pdf_template.tex --output=output/david_figueiredo_net_dev_cv.pdf
 
       - name: Generate MD document
         uses: docker://pandoc/extra
         with:
-          args: src/resume.yml --template=templates/md_template.md --write=gfm --wrap=none --output=david_figueiredo_net_dev_cv.md
+          args: src/resume.yml --template=templates/md_template.md --write=gfm --wrap=none --output=output/david_figueiredo_net_dev_cv.md
 
-      - name: Move resulting files to output
-        run: mv david_figueiredo_net_dev_cv.md david_figueiredo_net_dev_cv.pdf output/
+      - name: Copy generated MD document to the README
+        run: cp output/david_figueiredo_net_dev_cv.MD README.md
 
-      - name: Upload TEX to artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: resume
-          path: output/
+      # - name: Move resulting file to output
+      #   run: mv david_figueiredo_net_dev_cv.md david_figueiredo_net_dev_cv.pdf output/
 
-  commit:
-    name: Add and commit artifacts to repo
-    runs-on: ubuntu-latest
-    needs: compile
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      # - name: Upload TEX to artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: resume
+      #     path: output/
 
-    - name: Download artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: resume
-        path: output/
+      - name: Add and commit to main
+        run: | 
+          git config --global user.name 'dfigueiredo31'
+          git config --global user.email 'd.figueiredo@outlook.pt'
+          git add .
+          git commit -m "Compiled a new version of the resume"
+          git push
+
+  # commit:
+  #   name: Add and commit artifacts to repo
+  #   runs-on: ubuntu-latest
+  #   needs: compile
+  #   steps:
+  #   - name: Checkout code
+  #     uses: actions/checkout@v4
+
+  #   - name: Download artifact
+  #     uses: actions/download-artifact@v4
+  #     with:
+  #       name: resume
+  #       path: output/
     
-    - name: Add and commit to main
-      run: | 
-        git config --global user.name 'dfigueiredo31'
-        git config --global user.email 'd.figueiredo@outlook.pt'
-        git add .
-        git commit -m "Compiled a new version of the resume"
-        git push
+  #   - name: Add and commit to main
+  #     run: | 
+  #       git config --global user.name 'dfigueiredo31'
+  #       git config --global user.email 'd.figueiredo@outlook.pt'
+  #       git add .
+  #       git commit -m "Compiled a new version of the resume"
+  #       git push
