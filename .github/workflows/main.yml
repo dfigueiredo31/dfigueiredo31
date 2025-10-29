@@ -29,11 +29,15 @@ jobs:
 
      - name: Commit README.md
        run: | 
-          git config --global user.name 'dfigueiredo31'
-          git config --global user.email 'd.figueiredo@outlook.pt'
-          git add .
+        git config --global user.name 'dfigueiredo31'
+        git config --global user.email 'd.figueiredo@outlook.pt'
+        git add .
+        if ! git diff --cached --quiet; then
           git commit -m "Update README.md"
-          git push
+        git push
+        else
+          echo "No changes to commit."
+        fi
 
   release_pdf:
     name: Compile resume to PDF
