@@ -34,6 +34,7 @@ jobs:
         with:
           artifacts: david_figueiredo_net_dev_cv.pdf
           artifactContentType: application/pdf
+          tag: latest
           name: Latest version
 
       - name: Generate md document (README.md)
