@@ -18,6 +18,7 @@ jobs:
   compile:
     name: Compile resume source to MD and PDF
     runs-on: ubuntu-latest
+    container: pandoc/extra
     steps:
 
       - name: Checkout code
@@ -26,17 +27,24 @@ jobs:
       - name: Generate PDF document
         uses: docker://pandoc/extra
         with:
-          args: src/resume.yml --template=templates/pdf_template.tex --output=output/david_figueiredo_net_dev_cv.pdf
+          args: src/resume.yml --template=templates/pdf_template.tex --output=david_figueiredo_net_dev_cv.pdf
 
-      - name: Generate MD document (README.MD)
+      - name: Release generated PDF
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: david_figueiredo_net_dev_cv.pdf
+          artifactContentType: application/pdf
+          name: Latest version
+
+      - name: Generate md document (README.md)
         uses: docker://pandoc/extra
         with:
           args: src/resume.yml --template=templates/md_template.md --write=gfm --wrap=none --output=README.md
 
-      - name: Add and commit to main
+      - name: Commit README.md
         run: | 
           git config --global user.name 'dfigueiredo31'
           git config --global user.email 'd.figueiredo@outlook.pt'
-          git add .
+          git add README.md
           git commit -m "Compiled a new version of the resume"
           git push
