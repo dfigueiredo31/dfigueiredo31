@@ -55,7 +55,8 @@ jobs:
       - name: Release generated PDF
         uses: ncipollo/release-action@v1
         with:
+          tag: latest
+          allowUpdates: true
           artifacts: david_figueiredo_net_dev_cv.pdf
           artifactContentType: application/pdf
-          tag: latest
           name: Latest version
