@@ -1,6 +1,6 @@
 ---
 Name: David Figueiredo
-Role: Backend developer (.NET & Python)
+Role: CCM & Integrations Consultant
 
 Contact:
   E-mail: d.figueiredo@outlook.pt
@@ -8,17 +8,29 @@ Contact:
   LinkedIn: linkedin.com/in/davidfigueiredo31
   GitHub: github.com/dfigueiredo31
 
-Summary: Developer with 4 years experience working in complex and fast-paced environments. Solid foundations in **.NET Framework**, **C#**, **APIs and Webservices (ASMX, WCF)**, with exposure to **Python** through a teaching role in higher education. Team player with strong analytic and critic sense. Currently looking for Backend, AI or Cloud roles.
+Summary: Consultant with 5 years experience working in complex and fast-paced environments. Multiple roles in CCM. Solid foundations in .NET Framework, C#, APIs and Webservices (ASMX, WCF), with exposure to Python through a teaching role in higher education. Team player with strong analytic and critic sense.
 
 Work:
+  - Role: CCM & Integrations Consultant
+    Company: Emagine
+    Start: Dec 2025
+    End: current
+    Summary:
+      - Maintaining CCM workflows for one of the top-3 insurance companies in Denmark.
+      - Supporting highly complex business logics and document delivery in a Agile environment.
+    Tools:
+      - .NET Framework (C#)
+      - SQL Server Integration Services (SSIS)
+      - Thunderhead CCM
+
   - Role: Assistant Professor
     Company: Universidade de Trás-os-Montes e Alto Douro
     Start: Fev 2025
     End: Aug 2025
     Summary:
-      - Lectured undergrad students on programming logic, control structures, and data structures in **Python**, emphasizing best practices in readable and reusable code.
+      - Lectured undergrad students on programming logic, control structures, and data structures in Python, emphasizing best practices in readable and reusable code.
   
-  - Role: Application Management Services (AMS) Consultant
+  - Role: CCM Consultant
     Company: Softinsa - Engenharia de Software Avançado, Lda.
     Start: Oct 2022
     End: May 2025
@@ -29,7 +41,7 @@ Work:
     Tools:
       - .NET Framework (C#); SQL Server
       - Azure DevOps
-      - Precisely EngageOne software suit
+      - Precisely EngageOne/Doc1 software suit
 
   - Role: Interoperability Engineer
     Company: ST+I Unipessoal Lda.
