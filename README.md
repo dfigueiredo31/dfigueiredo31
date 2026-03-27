@@ -7,15 +7,24 @@
 
 ## Summary
 
-Developer with 4 years experience working in complex and fast-paced environments. Solid foundations in **.NET Framework**, **C#**, **APIs and Webservices (ASMX, WCF)**, with exposure to **Python** through a teaching role in higher education. Team player with strong analytic and critic sense. Currently looking for Backend, AI or Cloud roles.
+Consultant with 5 years experience working in complex and fast-paced environments. Multiple roles in CCM. Solid foundations in .NET Framework, C#, APIs and Webservices (ASMX, WCF), with exposure to Python through a teaching role in higher education. Team player with strong analytic and critic sense.
 
 ## Work Experience
 
+### CCM & Integrations Consultant - Dec 2025 to current
+*Emagine*  
+Maintaining CCM workflows for one of the top-3 insurance companies in Denmark.
+Supporting highly complex business logics and document delivery in a Agile environment.
+  
+**Tools used:**
+- .NET Framework (C#)
+- SQL Server Integration Services (SSIS)
+- Thunderhead CCM
 ### Assistant Professor - Fev 2025 to Aug 2025
 *Universidade de Trás-os-Montes e Alto Douro*  
-Lectured undergrad students on programming logic, control structures, and data structures in **Python**, emphasizing best practices in readable and reusable code.
+Lectured undergrad students on programming logic, control structures, and data structures in Python, emphasizing best practices in readable and reusable code.
   
-### Application Management Services (AMS) Consultant - Oct 2022 to May 2025
+### CCM Consultant - Oct 2022 to May 2025
 *Softinsa - Engenharia de Software Avançado, Lda.*  
 Maintained and implemented Customer Communication workflows, for a client in the banking sector, ensuring availability and correctness of customer documents.
 Built document templates, aligning the client’s business needs, legal requirements and customer data, in order to deliver tailor-made documents such as invoices, contracts and account statements.
@@ -24,7 +33,7 @@ Maintained WCF and ASMX webservices built on .NET Framework and deployed via Azu
 **Tools used:**
 - .NET Framework (C#); SQL Server
 - Azure DevOps
-- Precisely EngageOne software suit
+- Precisely EngageOne/Doc1 software suit
 ### Interoperability Engineer - May 2021 to Oct 2022
 *ST+I Unipessoal Lda.*  
 Developed and maintained HL7 interoperability interfaces and REST APIs, built on .NET Framework, ensuring compatibility and correct data exchange between our software suite and third-party systems.
