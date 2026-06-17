@@ -7,7 +7,7 @@
 
 ## Summary
 
-Consultant with 5 years experience working in complex and fast-paced environments. Multiple roles in CCM. Solid foundations in .NET Framework, C#, APIs and Webservices (ASMX, WCF), with exposure to Python through a teaching role in higher education. Team player with strong analytic and critic sense.
+Consultant with 5 years experience. Multiple roles in CCM. Solid foundations in .NET Framework, C#, APIs and Webservices (ASMX, WCF), with exposure to Python through a teaching role in higher education. Team player with strong analytic and critic sense.
 
 ## Work Experience
 
